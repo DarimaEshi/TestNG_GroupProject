@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="2" name="Test">
+
+		<groups>
+			<define name="all">
+				<include name="Roman" />
+				<include name="Hannah" />
+				<include name="Darima" />
+				<include name="Shrinkhala" />
+				<include name="Juret" />
+				<include name="smoke" />
+				<include name="regression" />
+			</define>
+
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test.LoginTesting" />
+			<class name="test.MyAccountTesting" />
+			<class name="test.ProductPageTesting" />
+			<class name="test.HomePageTesting" />
+			<class name="test.SearchPageTesting" />
+			<class name="test.SocialMediaSubscriptionTesting" />
+			<class name="test.ShoppingCartTesting" />
+			<class name="test.ReigstrationTesting" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
